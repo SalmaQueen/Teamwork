@@ -3,4 +3,4 @@ Teamwork is an ​ internal social network for employees of an organization. The
 
 ![Build Status](https://travis-ci.org/AgnesNM/Teamwork.svg?branch=master)
 
-[![Coverage Status](https://coveralls.io/repos/github/AgnesNM/Teamwork/badge.svg?branch=master)]
+![Coverage Status](https://coveralls.io/repos/github/AgnesNM/Teamwork/badge.svg?branch=master)

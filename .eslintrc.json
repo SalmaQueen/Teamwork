@@ -6,7 +6,8 @@
     },
     "extends": [
         "airbnb",
-        "extends" , "eslint:recommended"
+        "extends" , "eslint:recommended",
+        "extends", "plugin:prettier/recommended"
     ],
     "globals": {
         "Atomics": "readonly",

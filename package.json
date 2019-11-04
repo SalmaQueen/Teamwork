@@ -19,9 +19,12 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^1.7.0",
-     "husky" : 
-        "hooks" , "pre-commit": "npm run lint && npm run format",        
-    "jest": "^24.9.0"
+    "husky": "hooks",
+    "jest": "^24.9.0",
+    "lint-staged": 
+      "*.+(js|jsx)", "eslint --fix": "git add",
+      "*.+(json|css|md)" : "prettier --write" , "git add": "",  
+    "pre-commit": "npm run lint && npm run format"
   },
   "scripts": {
     "test": "jest",

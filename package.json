@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "*.+(json|css|md)": "prettier --write",
-    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
     "@typescript-eslint/parser": "^2.6.0",
     "coveralls": "^3.0.7",
     "eslint": "^6.6.0",

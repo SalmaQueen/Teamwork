@@ -5,13 +5,16 @@
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "request": "^2.88.0"
   },
   "devDependencies": {
+    "*.+(json|css|md)": "prettier --write",
     "@typescript-eslint/eslint-plugin": "^2.6.0",
     "@typescript-eslint/parser": "^2.6.0",
     "coveralls": "^3.0.7",
     "eslint": "^6.6.0",
+    "eslint --fix": "git add",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-import": "^2.18.2",
@@ -19,15 +22,16 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "git add": "",
     "husky": "hooks",
+    "jasmine": "^3.5.0",
+    "jasmine-node": "^3.0.0",
     "jest": "^24.9.0",
-    "lint-staged": 
-      "*.+(js|jsx)", "eslint --fix": "git add",
-      "*.+(json|css|md)" : "prettier --write" , "git add": "",  
+    "lint-staged": "*.+(js|jsx)",
     "pre-commit": "npm run lint && npm run format"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jasmine-node spec",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."

@@ -26,4 +26,6 @@ If you would like to contribute to this project, I have added all the features o
 
 ![Coverage Status](https://coveralls.io/repos/github/AgnesNM/Teamwork/badge.svg?branch=master)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Greenkeeper badge](https://badges.greenkeeper.io/AgnesNM/Teamwork.svg)](https://greenkeeper.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/AgnesNM/Teamwork.svg)](https://greenkeeper.io/)

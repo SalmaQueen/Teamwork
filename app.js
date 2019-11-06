@@ -2,8 +2,8 @@ let express = require('express');
 let app = express();
 
 
-app.get('/', (res, res) => {
-  res.send('Hello World');
+app.get('/', (res, req) => {
+  res.send('Admin account created successfully');
 });
 
 let server = app.listen(3000, () => {

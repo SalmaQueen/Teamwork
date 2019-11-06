@@ -16,7 +16,7 @@ describe("create admin account", () => {
         it("returns 'admin account created successfully'", () => {
             request.get(base_url, (error, response, body) => {
                 expect(body).toBe('admin account created successfully');
-                helloWorld.closeServer();
+                createAdmin.closeServer();
                 done();
             });
         });

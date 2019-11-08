@@ -30,7 +30,7 @@ app.get('/', function (req, res) {
                res.status(400).send(err);
            }
            res.status(200).send(res.rows);
-           client.end();
+           pool.end();
        });
        
     });        

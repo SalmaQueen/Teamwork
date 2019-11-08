@@ -9,11 +9,8 @@ describe("admin sign in", () => {
                 done();
             });            
         });
-<<<<<<< HEAD:spec/support/create_admin_test_spec.js
-        it("return message body", () =>{
-=======
+        
         it("return success message", () =>{
->>>>>>> admin_sign_in:spec/admin_sign_in_spec.js
             request.get(base_url,(error,request,body)=>{                
                 expect(body).toBe("admin logged in successfully!");
                 done();

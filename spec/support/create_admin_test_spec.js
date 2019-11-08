@@ -9,7 +9,7 @@ describe("create admin account", () => {
                 done();
             });            
         });
-        it("return status code 200", () =>{
+        it("return message body", () =>{
             request.get(base_url,(error,request,body)=>{                
                 expect(body).toBe("admin account created successfully!");
                 done();

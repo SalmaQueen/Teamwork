@@ -8,6 +8,8 @@ app.post("/", (req,res)=>{
 });
 
 app.get("/", (req,res)=>{
-    res.send("admin account created successfully!");
+    req.params.username;
+    req.params.password;
+    res.send("admin logged in successfully!");
     app.listen(3000);
 });

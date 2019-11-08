@@ -1,17 +1,21 @@
 const request = require('request');
 const base_url = "http://localhost:3000/";
 
-describe("create admin account", () => {
-    describe("POST /",()=> {
+describe("admin sign in", () => {
+    describe("GET/",()=> {
         it("return status code 200", () =>{
-            request.get(base_url,(error,request,body)=>{                
-                expect(res.statusCode).toBe(200);
+            request.get(base_url,(error,response,body)=>{                
+                expect(response.statusCode).toBe(200);
                 done();
             });            
         });
+<<<<<<< HEAD:spec/support/create_admin_test_spec.js
         it("return message body", () =>{
+=======
+        it("return success message", () =>{
+>>>>>>> admin_sign_in:spec/admin_sign_in_spec.js
             request.get(base_url,(error,request,body)=>{                
-                expect(body).toBe("admin account created successfully!");
+                expect(body).toBe("admin logged in successfully!");
                 done();
             });            
         });

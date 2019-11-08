@@ -1,4 +1,4 @@
-const Category = require('./models/category');
+const Category = require('./models/Category');
 
 app.get('/api/category/:id', (req, res, next) => {
     Category.findOne({

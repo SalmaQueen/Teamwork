@@ -2,7 +2,7 @@ const request = require("request");
 const base_url = "http://localhost:3000/";
  
  
-describe("employee can view a specific article", () => {
+describe("employee can view all articles in a category", () => {
     describe("GET /", () => {
         it("return a response status code of 200", () => {
             request.get(base_url,(error,response,body) =>{
@@ -11,16 +11,16 @@ describe("employee can view a specific article", () => {
             });
         });
     
-        it("send message body with article title", () => {
+        it("send message body with article", () => {
             request.post(base_url, (error,request,body) => {
-                expect(body).toContain(articleTitle);
+                expect(body).toContain(article);
                 done();
             });
         });
 
-        it("send message body with article id", () => {
+        it("send message body with article category", () => {
             request.post(base_url, (error, request,body) => {
-                expect(body).toContain(articleId);
+                expect(body).toContain(articleCategory);
             });
         });
        

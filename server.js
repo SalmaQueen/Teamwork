@@ -29,7 +29,7 @@ app.get('/', function (req, res,next) {
                res.status(400).send(err);
            }
            res.status(200).send(res.rows);
-           pool.end();
+           
        });
        
     });        
@@ -38,3 +38,30 @@ app.get('/', function (req, res,next) {
 app.listen(4000, function () {
     console.log('Server is running.. on Port 4000');
 });
+
+
+// const express = require('express');
+// const bodyParser = require('body-parser');
+
+// const app = express();
+
+// const db = require('./queries');
+// const port = 3000;
+
+
+// app.use(bodyParser.json())
+// app.use(
+//   bodyParser.urlencoded({
+//     extended: true,
+//   })
+// );
+
+// app.get('/', (request, response) => {
+//     response.json({ info: 'Node.js, Express, and Postgres API' });
+// });
+
+// app.get('/categories', db.getCategories);
+
+// app.listen(port, () => {
+//     console.log(`App running on port ${port}.`)
+// });

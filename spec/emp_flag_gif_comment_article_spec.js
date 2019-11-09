@@ -3,7 +3,7 @@ const base_url = "http://localhost:3000/";
  
  
 describe("employee can flag gifs, comments and articles as inappropriate", () => {
-    describe("GET /", () => {
+    describe("POST /", () => {
         it("return a successful response status code of 200", () => {
             request.get(base_url,(error,response,body) =>{
                 expect(response.statusCode).toBe(200);

@@ -1,12 +1,6 @@
 const express = require('express');
-<<<<<<< HEAD
 
 const pg = require("pg");
-=======
-
-const pg = require("pg");
-
->>>>>>> develop
 
 const app = express();
 
@@ -21,21 +15,13 @@ let config = {
 
 let pool = new pg.Pool(config);
 
-<<<<<<< HEAD
-app.get('/', function (req, res,next) {
-=======
 app.get('/', function (req, res) {
->>>>>>> develop
     pool.connect(function(err,client,done) {
        if(err){
            console.log("not able to get connection" + err);
            res.status(400).send(err); 
        } 
-<<<<<<< HEAD
        pool.query("SELECT * FROM categories where category_name='jokes'", [1], function(err,result) {
-=======
-       pool.query('SELECT * FROM categories', [1], function(err,result) {
->>>>>>> develop
           //call `done()` to release the client back to the pool
            done(); 
            if(err){
@@ -43,7 +29,6 @@ app.get('/', function (req, res) {
                res.status(400).send(err);
            }
            res.status(200).send(res.rows);
-<<<<<<< HEAD
            
        });
        
@@ -80,14 +65,3 @@ app.listen(4000, function () {
 // app.listen(port, () => {
 //     console.log(`App running on port ${port}.`)
 // });
-=======
-           pool.end();
-       });
-       
-    });        
-});
-
-app.listen(4000, function () {
-    console.log('Server is running.. on Port 4000');
-});
->>>>>>> develop

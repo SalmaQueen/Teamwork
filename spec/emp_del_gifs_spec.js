@@ -2,7 +2,7 @@ const request = require("request");
 const base_url = "http://localhost:3000/";
  
  
-describe("employee can share  gifs", () => {
+describe("employee can deletegifs", () => {
     describe("GET /", () => {
         it("return a response status code of 200", () => {
             request.get(base_url,(error,response,body) =>{
@@ -12,7 +12,7 @@ describe("employee can share  gifs", () => {
         });
         it("return a successful message body", () => {
             request.get(base_url, (error, response, body) => {
-                expect(body).toBe('gif shared successfully');
+                expect(body).toBe('gif deleted');
                 done();
             });
         });

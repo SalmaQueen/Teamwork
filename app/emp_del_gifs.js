@@ -4,6 +4,6 @@ const app = express();
 app.get("/", (req,res) => {
     req.params.gifTitle;
     req.params.gifId;
-    res.send("gif shared successfully!");
+    res.send("gif deleted!");
     app.listen(3000);
 });

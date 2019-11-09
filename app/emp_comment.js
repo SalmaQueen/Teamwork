@@ -1,9 +1,10 @@
 const express = require("express");
 const app = express();
 
-app.get("/", (req,res) => {
+app.post("/", (req,res) => {
     req.params.gifTitle;
     req.params.gifId;
-    res.send("gif deleted!");
+    req.params.comments;
+    res.send("comment added!");
     app.listen(3000);
 });

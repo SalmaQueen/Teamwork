@@ -1,9 +1,9 @@
 const request = require("request");
 const base_url = "http://localhost:3000/";
-
-
-describe("admin can create employee account", () => {
-    describe("POST /", () => {
+ 
+ 
+describe("employee can share  gifs", () => {
+    describe("GET /", () => {
         it("return a response status code of 200", () => {
             request.get(base_url,(error,response,body) =>{
                 expect(response.statusCode).toBe(200);
@@ -12,19 +12,19 @@ describe("admin can create employee account", () => {
         });
         it("return a successful message body", () => {
             request.get(base_url, (error, response, body) => {
-                expect(body).toBe('employee account created successfully');
+                expect(body).toBe('gif shared successfully');
                 done();
             });
         });
-        it("send message body with username", () => {
+        it("send message body with gif title", () => {
             request.post(base_url, (error,request,body) => {
-                expect(body).toContain(username);
+                expect(body).toContain(gifTitle);
                 done();
             });
         });
-        it("send message body with password", () => {
+        it("send message body with gif id", () => {
             request.post(base_url, (error, request,body) => {
-                expect(body).toContain(password);
+                expect(body).toContain(gifId);
             });
         });
     });

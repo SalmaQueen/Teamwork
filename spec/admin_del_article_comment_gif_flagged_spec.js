@@ -8,7 +8,7 @@ describe("admin can delete flagged gifs, comments and articles as inappropriate"
         it("return a response status code of 200", () => {
 =======
 describe("employee can flag gifs, comments and articles as inappropriate", () => {
-    describe("GET /", () => {
+    describe("POST /", () => {
         it("return a successful response status code of 200", () => {
 >>>>>>> emp_flag_gif_comment_article:spec/emp_flag_gif_comment_article_spec.js
             request.get(base_url,(error,response,body) =>{

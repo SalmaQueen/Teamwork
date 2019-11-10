@@ -17,6 +17,13 @@ app.post('/api/employees', (req, res, next) => {
     res.status(201).json({
       message: 'Employee created successfully!'
     });
-  });
+});
+
+app.put('/api/employees', (req, res, next) => {
+        console.log(req.body);
+        res.status(201).json({
+          message: 'Employee created successfully!'
+        });
+});
 
 module.exports = app;

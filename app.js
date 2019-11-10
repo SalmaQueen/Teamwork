@@ -19,3 +19,4 @@ app.post('/api/employees', (req, res, next) => {
     });
   });
 
+module.exports = app;

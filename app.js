@@ -1,5 +1,5 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -10,22 +10,20 @@ app.use((req, res, next) => {
     next();
   });
 
-app.get('/api/gifs/', (req, res, next) => {
-        const gifs = [
-          {
-            gifId: '1',
-            gifTitle: 'mom',        
-          },
-        {
-            gifId: '2',
-            gifTitle: 'family',        
-        },       
-        ];
-res.status(200).json(gifs);   
-    
-});
-    
-module.exports = app;
-    
+app.use(bodyParser.json());
 
-    
+app.post('/api/employees', (req, res, next) => {
+    console.log(req.body);
+    res.status(201).json({
+      message: 'Employee created successfully!'
+    });
+});
+
+app.put('/api/employees', (req, res, next) => {
+        console.log(req.body);
+        res.status(201).json({
+          message: 'Employee created successfully!'
+        });
+});
+
+module.exports = app;

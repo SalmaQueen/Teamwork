@@ -1,33 +1,49 @@
-const express = require("express");
-const pg = require("pg");
+const http = require('http');
+const app = require('./app');
 
-const connectionString = "postgres://postgres:1234@localhost:5432/Teamwork";
+const normalizePort = val => {
+  const port = parseInt(val, 10);
 
-const pool = new pg.Pool(connectionString);
-const app = express();
+  if (isNaN(port)) {
+    return val;
+  }
+  if (port >= 0) {
+    return port;
+  }
+  return false;
+};
 
+const port = normalizePort(process.env.PORT || '3000');
 
+app.set('port', port);
 
-app.get("/", (req,res,next) => {
-pool.connect((err,client,done) =>{
-    if(err){
-        console.log("not able to get connection" + err);
-        res.status(400).send(err);
-    }
-    else{
-        client.query("SELECT * FROM $1", [1], categories, (err,result) =>{
-            done();
-            if(err){
-                console.log(err);
-                res.status(400).send(err);
-            }
-            res.status(200).send(result.rows);
-        });
-    }
-   
+const errorHandler = error => {
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+  const address = server.address();
+  const bind = typeof address === 'string' ? 'pipe ' + address : 'port: ' + port;
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + ' requires elevated privileges.');
+      process.exit(1);
+      break;
+    case 'EADDRINUSE':
+      console.error(bind + ' is already in use.');
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+};
+
+const server = http.createServer(app);
+
+server.on('error', errorHandler);
+server.on('listening', () => {
+  const address = server.address();
+  const bind = typeof address === 'string' ? 'pipe ' + address : 'port ' + port;
+  console.log('Listening on ' + bind);
 });
-});
 
-app.listen(4000, ()=>{
-    console.log('Server is running...on Port 4000');
-});
+server.listen(port);

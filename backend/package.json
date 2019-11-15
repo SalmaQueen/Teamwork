@@ -1,8 +1,8 @@
-{
+  {
   "name": "teamwork",
   "version": "1.0.0",
   "description": "capstone project",
-  "main": "index.js",
+  "main": "./public/index.js",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
@@ -12,8 +12,8 @@
   },
   "devDependencies": {
     "*.+(json|css|md)": "prettier --write",
-    "@typescript-eslint/eslint-plugin": "^2.6.0",
-    "@typescript-eslint/parser": "^2.6.0",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
     "coveralls": "^3.0.7",
     "eslint": "^6.6.0",
     "eslint --fix": "git add",
@@ -38,9 +38,8 @@
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "dev": "nodemon index.js",
-    "start": "node index.js",
-    "create": "node ./services/db createTables"    
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",

@@ -33,12 +33,4 @@ router.post('/', (req, res, next) => {
   });
 });
 
-
-
 module.exports = router;
-
-// in routes/stuff.js
-
-const stuffCtrl = require('../controllers/stuff');
-
-router.get('/', stuffCtrl.getAllStuff);

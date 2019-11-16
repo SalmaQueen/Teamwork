@@ -30,8 +30,6 @@ router.post('/', (req, res, next) => {
       console.log(res.rows[0]);    
     }
   });
-  });
-
-
+});
 
 module.exports = router;

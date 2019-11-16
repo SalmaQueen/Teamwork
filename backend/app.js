@@ -9,5 +9,6 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.use('/api/v1/create_article', createArticlesRoutes);
 
-module.exports = app;
 
+
+module.exports = app;

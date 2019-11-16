@@ -1,6 +1,7 @@
 const express = require('express');
 
 const router = express.Router();
+const stuffCtrl = require('../controllers/stuff');
 
 const { Pool} = require('pg');
 
@@ -30,8 +31,14 @@ router.post('/', (req, res, next) => {
       console.log(res.rows[0]);    
     }
   });
-  });
+});
 
 
 
 module.exports = router;
+
+// in routes/stuff.js
+
+const stuffCtrl = require('../controllers/stuff');
+
+router.get('/', stuffCtrl.getAllStuff);

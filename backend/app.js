@@ -10,5 +10,4 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use('/api/v1/create_emp_acct', createEmployeeAcctRoutes);
 
 
-
 module.exports = app;

@@ -28,6 +28,7 @@ router.post('/', (req, res, next) => {
   pool.query(text,values, (err,res) => {
       if(err){
         console.log(err.stack);
+        res.status(400);
       }  else{
         console.log(res.rows[0]);
         

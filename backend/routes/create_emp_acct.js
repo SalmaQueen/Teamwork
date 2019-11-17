@@ -29,13 +29,8 @@ router.post('/', (req, res, next) => {
       if(err){   
           console.log(err.stack);  
       }  else {
-          console.log(res.rows[0]);          
-        }
-        // err ? err.stack : res.rows;
-  //       err ? res.status(400).json({
-  //         error:error
-  //       }) : res.send("account creation successful")
-        
+          console.log(res.rows[0]);         
+        }        
   });
   
 });

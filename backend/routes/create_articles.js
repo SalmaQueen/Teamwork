@@ -1,11 +1,8 @@
 const express = require('express');
 const router = express.Router();
-// const uniqueValidator = require('pg-validate');
 
 const { Pool} = require('pg');
-
 const connectionString = 'postgres://nduta:e1234f@localhost:5432/Teamwork';
-
 
 const pool = new Pool({
     connectionString: connectionString,
@@ -23,9 +20,20 @@ router.post('/', (req, res, next) => {
     ];                    
   
   const text = 'INSERT INTO articles(emp_id,article_title, article_author, date_created, category, flag_id) VALUES($1,$2,$3,$4,$5, $6) RETURNING *'; 
+
   pool.query(text,values, (err,res) => {
-      err ? err.stack:res.rows[0];      
+      if(err){
+        console.log(err.stack);
+      }  else{
+        console.log(res.rows[0]);
+        
+      }   
   });
+  
 });
+
+
+
+
 
 module.exports = router;

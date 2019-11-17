@@ -26,13 +26,11 @@ router.post('/', (req, res, next) => {
   const text = 'INSERT INTO employees(first_name,last_name,email,password, gender, job_role, department, address, emp_id, db_role) VALUES($1,$2,$3,$4,$5, $6, $7, $8, $9, $10) RETURNING *'; 
 
   pool.query(text,values, (err,res) => {
-      if(err){
-        console.log(err.stack);
-        res.status(400);
-      }  else{
-        console.log(res.rows[0]);
-        
-      }   
+      if(err){   
+          console.log(err.stack);  
+      }  else {
+          console.log(res.rows[0]);         
+        }        
   });
   
 });

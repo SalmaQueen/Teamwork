@@ -10,5 +10,5 @@ const pool = new Pool({
 module.exports = app => {  
   app.use('/v1/create_employee', employees)   
   app.use('/v1/employees', employees)
-  // app.use('/v1/one_employee', employees)
+  app.use('/v1/one_employee', employees)
 }

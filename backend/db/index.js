@@ -1,10 +1,9 @@
-const { Pool } = require('pg');
-
-const connectionString = 'postgres://nduta:alGaz5U5ChubwGxWPXLeyEpxfYMSvtWS@salt.db.elephantsql.com:5432/umpqdziw'
+const { Pool} = require('pg');
+const connectionString = 'postgres://nduta:e1234f@localhost:5432/Teamwork';
 
 const pool = new Pool({
-  connectionString: connectionString,
-});
+    connectionString: connectionString,
+  });
 
 
 module.exports = {

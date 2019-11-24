@@ -38,10 +38,11 @@ router.post('/', async (req, res) => {
 
 
 
-//get a specific employee
-// router.get('/:emp_id', async (req, res) => {  
+// //get a specific employee
+// router.get('/:id', async (req, res) => {  
 //   const text = 'SELECT * FROM employees WHERE emp_id = $1';  
-//   const rows  = await db.query(text, [req.params.emp_id])
+//   const emp_id = req.params.emp_id;
+//   const rows  = await db.query(text, [emp_id])
 //   .then((res) => console.log(res.rows[0]))
 //   .catch((e) => console.error(e.stack))  
 // });

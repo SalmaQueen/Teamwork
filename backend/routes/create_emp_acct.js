@@ -1,43 +1,14 @@
-const express = require('express');
-const router = express.Router();
+// const express = require('express');
+// const router = express.Router();
 
-const { Pool} = require('pg');
-const connectionString = 'postgres://nduta:e1234f@localhost:5432/Teamwork';
+// const { Pool} = require('pg');
+// const connectionString = 'postgres://nduta:e1234f@localhost:5432/Teamwork';
 
-const pool = new Pool({
-    connectionString: connectionString,
-  });
+// const pool = new Pool({
+//     connectionString: connectionString,
+//   });
 
-
-//get route, check whether employee already exista
-router.get('/', (req,res,next) => {
-
-  // if(!NaN(req.params.id)){
-  //   Employee.findOne({
-  //     _id:req.params.id
-  //   }).then((employee) => {
-  //     if(employee){
-  //       delete employee.password;
-  //       res.status(200).json(user)
-  //     }else{
-  //       resError(res,404, "Employee not Found")
-  //     }    
-  //   });     
-  // } else{
-  //   resError(res, 500, "Invalid ID");
-  // }
- 
-  const info = 'SELECT * FROM employees';
-  pool.query (info, (err,res) => {
-    if(err){   
-      console.log(err.stack);  
-  }  else {
-      console.log(res.rows);         
-    }
-  })
-});
-
-// //post route to create new employee
+// //post route
 // router.post('/', (req, res, next) => {
 //     const values = [   
 //       req.body.first_name,
@@ -64,4 +35,4 @@ router.get('/', (req,res,next) => {
   
 // });
 
-module.exports = router;
+// module.exports = router;
